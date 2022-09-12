@@ -1,0 +1,22 @@
+---
+version: v0.1.0
+output: build/test
+
+data_pack:
+  load:
+    - src
+  name: "[Test] {{ project_name | capitalize }} ({{ project_version }})"
+  description: ''
+  pack_format: 9
+
+require:
+  - bolt
+  - mecha.contrib.implicit_execute
+  - mecha.contrib.nesting
+pipeline:
+  - mecha
+
+meta:
+  mecha:
+    multiline: true
+    keep_comments: true
