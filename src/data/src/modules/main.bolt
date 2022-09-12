@@ -1,0 +1,4 @@
+from scripts.path import Path
+
+
+path = Path("ilh")
