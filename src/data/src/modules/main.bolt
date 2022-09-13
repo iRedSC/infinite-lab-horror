@@ -1,4 +1,13 @@
+# * This is where all the variables etc. are defined
+
+# Imports
 from scripts.path import Path
+from lib:scoreboard import IScoreboard
 
-
+# This creates a Path class used to define all function paths
+# ? See scripts/path for implementation
 path = Path("ilh")
+score = IScoreboard("ilh")
+
+function path("test"):
+    var = score("var", "dummy")

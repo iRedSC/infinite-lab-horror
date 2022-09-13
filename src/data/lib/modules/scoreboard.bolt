@@ -1,0 +1,8 @@
+class IScoreboard:
+    def __init__(self, namespace):
+        self.namespace = namespace
+
+    def __call__(self, name, type):
+        objective = f"{self.namespace}.{name}"
+        scoreboard objectives add objective type
+        return objective
