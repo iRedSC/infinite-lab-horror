@@ -30,8 +30,9 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@3.1.1
       with:
-        ftp-server: sftp.panel.newrealms.us:2022/
+        ftp-server: sftp.panel.newrealms.us/
         ftp-username: iredsc.378e2546
         ftp-password: ${{ secrets.password }}
+        port: 2022
         local-dir: ./build/release/
         server-dir: ./world/datapacks/
