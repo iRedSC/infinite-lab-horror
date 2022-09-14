@@ -3,11 +3,11 @@
 extend:
   - beet.yml
 
-output: build
+output: build/release
 name: ''
 
 author: iRedSC
 
 data_pack:
-  name: "release"
+  name: "infinite_lab_horror"
   zipped: true
