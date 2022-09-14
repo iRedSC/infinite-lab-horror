@@ -44,4 +44,4 @@ jobs:
         username: iredsc.378e2546
         password: ${{ secrets.password }}
         localDir: /build/release/
-        serverDir: /world/datapacks/
+        remoteDir: /world/datapacks/
