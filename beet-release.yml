@@ -3,11 +3,11 @@
 extend:
   - beet.yml
 
-output: build/release
+output: build
 name: ''
 
 author: iRedSC
 
 data_pack:
-  name: "{{ project_name | capitalize }} ({{ project_version }})"
+  name: "release"
   zipped: true
