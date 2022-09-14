@@ -53,5 +53,5 @@ jobs:
         server: sftp://panel.newrealms.us:2022
         username: iredsc.378e2546
         password: ${{ secrets.password }}
-        local-dir: build/release
-        server-dir: world/datapacks
+        local-dir: build/release/
+        server-dir: world/datapacks/
