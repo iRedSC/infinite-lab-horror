@@ -38,7 +38,10 @@ jobs:
     #     server-dir: ./world/datapacks/
 
     - name: 📂 Sync files
-      uses: Atyn/Simple-SFTP@0.0.2
+      uses: wangyucode/sftp-upload-action@v1.4.5
       with:
-        ftp-server: sftp://iredsc.378e2546:${{ secrets.password }}@panel.newrealms.us:2022/world/datapacks
-        local-directory: ./build/release/
+        host: sftp://panel.newrealms.us:2022
+        username: iredsc.378e2546
+        password: ${{ secrets.password }}
+        localDir: /build/release/
+        serverDir: /world/datapacks/
