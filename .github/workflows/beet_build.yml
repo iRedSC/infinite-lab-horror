@@ -28,7 +28,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install beet
     - name: Beet Build
-      run: beet -p beet-release.yml build --no-link
+      run: beet -p beet-release.yml build
       
   web-deploy:
     name: 🎉 Deploy
