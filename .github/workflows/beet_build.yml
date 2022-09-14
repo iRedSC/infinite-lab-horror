@@ -27,12 +27,18 @@ jobs:
     - name: Beet Build
       run: beet -p beet-release.yml build
           
+    # - name: 📂 Sync files
+    #   uses: SamKirkland/FTP-Deploy-Action@3.1.1
+    #   with:
+    #     ftp-server: sftp://panel.newrealms.us/
+    #     ftp-username: iredsc.378e2546
+    #     ftp-password: ${{ secrets.password }}
+    #     port: 2022
+    #     local-dir: ./build/release/
+    #     server-dir: ./world/datapacks/
+
     - name: 📂 Sync files
-      uses: SamKirkland/FTP-Deploy-Action@3.1.1
+      uses: Atyn/Simple-SFTP
       with:
-        ftp-server: sftp://panel.newrealms.us/
-        ftp-username: iredsc.378e2546
-        ftp-password: ${{ secrets.password }}
-        port: 2022
-        local-dir: ./build/release/
-        server-dir: ./world/datapacks/
+        ftp-server: sftp://iredsc.378e2546:${{ secrets.password }}@panel.newrealms.us:2022/world/datapacks
+        local-directory: ./build/release/
