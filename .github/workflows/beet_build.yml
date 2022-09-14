@@ -28,10 +28,10 @@ jobs:
       run: beet -p beet-release.yml build
           
     - name: 📂 Sync files
-      uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+      uses: SamKirkland/FTP-Deploy-Action@4.3.2
       with:
         server: sftp://panel.newrealms.us:2022
         username: iredsc.378e2546
         password: ${{ secrets.password }}
-        local_path: ./build/release/
-        remote_path: ./world/datapacks/
+        local-dir: ./build/release/
+        server-dir: ./world/datapacks/
