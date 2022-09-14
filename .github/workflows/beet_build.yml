@@ -30,9 +30,8 @@ jobs:
     - name: 📂 Sync files
       uses: wlixcc/SFTP-Deploy-Action@v1.2.4
       with:
-        server: sftp://panel.newrealms.us
+        server: sftp://panel.newrealms.us:2022
         username: iredsc.378e2546
         password: ${{ secrets.password }}
-        port: 2022
         local_path: ./build/release/
         remote_path: ./world/datapacks/
