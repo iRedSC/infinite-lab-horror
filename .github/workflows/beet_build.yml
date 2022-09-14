@@ -35,3 +35,4 @@ jobs:
         password: ${{ secrets.password }}
         local-dir: ./build/release/
         server-dir: ./world/datapacks/
+        git-ftp-args: --insecure
