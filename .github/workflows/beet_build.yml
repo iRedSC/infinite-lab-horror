@@ -26,9 +26,6 @@ jobs:
         pip install beet bolt mecha
     - name: Beet Build
       run: beet -p beet-release.yml build
-      
-    - name: 🚚 Get latest code
-      uses: actions/checkout@v2
           
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.3.2
