@@ -30,6 +30,6 @@ jobs:
       uses: SamKirkland/FTP-Deploy-Action@3.1.1
       with:
         ftp-server: sftp://iredsc.378e2546@panel.newrealms.us:2022/world/datapacks/
-        ftp-sername: iredsc.378e2546
+        ftp-username: iredsc.378e2546
         ftp-password: ${{ secrets.password }}
         local-dir: ./build/release/
