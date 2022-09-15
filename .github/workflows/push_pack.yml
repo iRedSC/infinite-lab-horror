@@ -1,10 +1,6 @@
-name: Push Data Pack
+name: Push Datapack
 
-on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+on: push
 
 permissions:
   contents: read
@@ -16,21 +12,29 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+
     - name: Set up Python 3.10
       uses: actions/setup-python@v3
       with:
         python-version: "3.10"
+
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
         pip install beet bolt mecha
-    - name: Beet Build
+
+    - name: Beet build
       run: beet -p beet-release.yml build
-          
-    - name: 📂 Sync files
+
+    - name: Push to FTP server
       uses: SamKirkland/FTP-Deploy-Action@3.1.1
       with:
+<<<<<<< HEAD:.github/workflows/beet_build.yml
         ftp-server: sftp://iredsc.378e2546@panel.newrealms.us:2022
+=======
+        ftp-server: sftp://panel.newrealms.us:2022
+        ftp-username: iredsc.378e2546
+>>>>>>> d7f4312c39a293ac31b5f3b7ffef62fd5f80e9b1:.github/workflows/push_pack.yml
         ftp-password: ${{ secrets.password }}
         local-dir: ./build/release/
         server-dir: ./world/datapacks/
