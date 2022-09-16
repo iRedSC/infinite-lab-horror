@@ -11,3 +11,7 @@ score = IScoreboard("ilh")
 
 function path("test"):
     var = score("var", "dummy")
+
+
+    function tag minecraft:load
+    say hi
