@@ -35,4 +35,4 @@ jobs:
         ftp-server: ftp://54.39.68.61:21/world/datapacks/
         ftp-username: redstonecharger@gmail.com.46593
         ftp-password: ${{ secrets.password }}
-        local-dir: /scripts/
+        local-dir: ./scripts/
