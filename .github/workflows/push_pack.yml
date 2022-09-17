@@ -32,7 +32,7 @@ jobs:
     - name: Push to FTP server
       uses: SamKirkland/FTP-Deploy-Action@3.1.1
       with:
-        ftp-server: ftp://54.39.68.61:21/world/datapacks/hm/
+        ftp-server: ftp://54.39.68.61:21/world/datapacks/
         ftp-username: redstonecharger@gmail.com.46593
         ftp-password: ${{ secrets.password }}
-        local-dir: ./
+        local-dir: /scripts/
