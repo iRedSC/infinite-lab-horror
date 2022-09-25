@@ -16,4 +16,4 @@ meta:
   mecha:
     multiline: true
   bolt:
-    entrypoint: "src:main"
+    entrypoint: "src:compile"

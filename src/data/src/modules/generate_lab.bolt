@@ -1,0 +1,15 @@
+# ? Bolt that generates random rooms
+
+from src:main import path
+
+prepend function path("generate_lab"):
+    function tag path("loop-1s")
+    
+    at @a as @e[tag=ilh.room_spawner, limit=1, sort=nearest] at @s:
+        particle flame ~ ~2 ~ 0 0.4 0 0 10 force @a
+        positioned ~20 ~ ~ if block ~ ~ ~ air run function path("summon_room_spawner")
+        positioned ~-20 ~ ~ if block ~ ~ ~ air run function path("summon_room_spawner")
+        positioned ~ ~ ~20 if block ~ ~ ~ air run function path("summon_room_spawner")
+        positioned ~ ~ ~-20 if block ~ ~ ~ air run function path("summon_room_spawner")
+        at @e[tag=ilh.room_spawner] if block ~ ~ ~ air run fill ~-10 ~ ~-10 ~10 ~ ~10 dirt
+        unless block ~ ~ ~ air run kill @s

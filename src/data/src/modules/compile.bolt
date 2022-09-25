@@ -1,0 +1,9 @@
+# ?  This is where all the parts of the code are imported and compiled
+# ?  You can essentially see an outline of what is going on through this file
+
+
+import src:roots as roots
+
+import src:user as user
+
+import src:generate_lab as generate_lab

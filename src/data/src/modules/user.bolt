@@ -1,0 +1,6 @@
+# ? End user functions and commands
+
+from src:main import path
+
+function path("summon_room_spawner"):
+    align xyz run summon marker ~ ~ ~ {Tags:["ilh.room_spawner"]}

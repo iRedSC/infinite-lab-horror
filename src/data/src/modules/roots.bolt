@@ -1,0 +1,20 @@
+# ? All of the root functions are first created here
+
+
+
+from src:main import path
+
+
+# * The loading/setup function
+prepend function path("load"):
+    function tag minecraft:load
+
+    function path("loop-1s")
+
+
+    say Infinite lab horror data pack loaded successfully
+
+prepend function path("loop-1s"):
+    function path("loop-1s", tag=True)
+
+    schedule function path("loop-1s") 0.5s replace
